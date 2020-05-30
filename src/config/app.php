@@ -175,6 +175,14 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        /*
+         * Project Service Providers
+         */
+
+        App\Providers\RepositoryServiceProvider::class,
+        App\Providers\ServiceServiceProvider::class,
+
     ],
 
     /*
@@ -227,6 +235,14 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+    ],
+
+    'lang' => [
+        'allowed' => [
+            'ru',
+            'uk',
+        ],
+        'default' => 'ru',
     ],
 
 ];

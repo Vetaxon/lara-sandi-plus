@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('Products')->group(function () {
+    Route::get('/products/upload', 'UploadProductsController@upload')->name('upload-products');
+    Route::get('/products/upload/check', 'UploadProductsController@checkStatus')->name('check-status');
+});
